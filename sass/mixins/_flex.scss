@@ -1,0 +1,52 @@
+//flex
+@mixin flex($flex...) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flexbasis($flexbasis...) {
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+@mixin flex-wrap($value) {
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    -ms-flex-wrap: $value;
+    flex-wrap: $value;
+}
+
+@mixin align-item($value) {
+    -webkit-align-items: $value;
+    align-items: $value;
+}
+
+@mixin align-content($value) {
+    -webkit-align-content: $value;
+    align-content: $value;
+}
+
+@mixin justify-content($value) {
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin grid($grid...) {
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin grid-columns($value) {
+    -ms-grid-columns: $value;
+    grid-template-columns: $value;
+}
+
+@mixin grid-rows($value) {
+    -ms-grid-rows: $value;
+    grid-template-rows: $value;
+}

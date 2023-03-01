@@ -1,0 +1,21 @@
+/*--------------------------- skeleton --------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--body-font-color);
+    font-family: var(--primary-font);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    outline: none;
+    @include transition(all .3s ease-in-out);
+}
