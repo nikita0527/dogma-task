@@ -157,6 +157,7 @@ h6 {
 }
 
 .btn-secondary {
+    display: inline-block;
     background: var(--secondary-color);
     color: #ffffff;
     border-radius: 10px;
@@ -171,21 +172,7 @@ h6 {
         color: #ffffff;
         @include transform(translateY(-8px));
     }
-}
-
-.btn-secondary {
-    background: var(--secondary-color);
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 18px 35px;
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    &:hover {
-        background: var(--primary-color);
-        color: #ffffff;
-        @include transform(translateY(-8px));
+    @include media(mb) {
+        width: 100%;
     }
 }
