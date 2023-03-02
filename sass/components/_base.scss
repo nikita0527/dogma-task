@@ -20,6 +20,10 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    width: auto;
+}
+
 a {
     color: #181433;
     text-decoration: none;
@@ -67,7 +71,7 @@ h2 {
     line-height: 1.2;
     letter-spacing: 0em;
     @include media(xs) {
-        font-size: 40px;
+        font-size: 36px;
     }
 }
 
@@ -123,7 +127,16 @@ h6 {
     margin: 0 auto;
 }
 
+.col-3 {
+    @include grid;
+    @include grid-columns(repeat(3, 1fr));
+    @include media(xs) {
+        @include grid-columns(repeat(1, 1fr));
+    }
+}
+
 .btn-primary {
+    display: inline-block;
     background: var(--primary-color);
     color: #ffffff;
     border-radius: 10px;
@@ -139,7 +152,6 @@ h6 {
         @include transform(translateY(-8px));
     }
     @include media(mb) {
-        display: block;
         width: 100%;
     }
 }
