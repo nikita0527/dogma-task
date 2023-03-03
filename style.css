@@ -173,6 +173,28 @@ h6 {
     .btn-secondary {
       width: 100%; } }
 
+[data-aos][data-aos][data-aos-duration="400"],
+body[data-aos-duration="400"] [data-aos] {
+  transition-duration: 800ms; }
+
+@-webkit-keyframes fly {
+  0% {
+    right: 0;
+    transform: scaleX(50%) scaleY(50%); }
+  100% {
+    right: 10px; } }
+@-moz-keyframes fly {
+  0% {
+    right: 0;
+    transform: scaleX(50%) scaleY(50%); }
+  100% {
+    right: 10px; } }
+@keyframes fly {
+  0% {
+    right: 0;
+    transform: scaleX(50%) scaleY(50%); }
+  100% {
+    right: 10px; } }
 #main-header {
   position: absolute;
   width: 100%;
@@ -688,7 +710,17 @@ section {
     width: 100px;
     display: block;
     position: absolute;
-    right: 0; }
+    right: 0;
+    z-index: 1;
+    -webkit-animation: fly;
+    -o-animation: fly;
+    -o-animation: fly;
+    animation: fly;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running; }
     @media (max-width: 1024px) {
       .choose-section .image-wrap::before {
         height: 70px;
@@ -842,7 +874,17 @@ section {
     display: block;
     position: absolute;
     left: 0;
-    top: 110px; }
+    top: 110px;
+    z-index: 1;
+    -webkit-animation: fly;
+    -o-animation: fly;
+    -o-animation: fly;
+    animation: fly;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running; }
     @media (max-width: 1024px) {
       .feature-two-section .image-wrap::before {
         top: 65px; } }
@@ -931,25 +973,36 @@ section {
       position: absolute;
       right: 0px;
       top: -15px;
-      z-index: 1; }
+      z-index: 1;
+      -webkit-animation: fly;
+      -o-animation: fly;
+      -o-animation: fly;
+      animation: fly;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: both;
+      animation-play-state: running; }
       @media (max-width: 1024px) {
         .contact-section .form-wrap::before {
           height: 50px;
           width: 50px; } }
-  .contact-section .overlay-img::before, .contact-section .overlay-img::after {
-    content: "";
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 105px;
-    height: 105px;
-    position: absolute;
-    left: 0; }
-  .contact-section .overlay-img::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='106' height='106' viewBox='0 0 106 106' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' fill='%231B1C31'/%3E%3Crect x='64' y='64' width='42' height='42' fill='white'/%3E%3C/svg%3E%0A");
-    top: 0; }
-  .contact-section .overlay-img::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='131' height='106' viewBox='0 0 131 106' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect opacity='0.1' width='64' height='64' fill='white'/%3E%3Crect opacity='0.1' x='106' y='39' width='25' height='25' fill='white'/%3E%3Crect x='64' y='64' width='42' height='42' fill='%231B1C31'/%3E%3C/svg%3E%0A");
-    bottom: 0; }
+  .contact-section .overlay-img {
+    overflow: hidden; }
+    .contact-section .overlay-img::before, .contact-section .overlay-img::after {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 105px;
+      height: 105px;
+      position: absolute;
+      left: 0; }
+    .contact-section .overlay-img::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='106' height='106' viewBox='0 0 106 106' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' fill='%231B1C31'/%3E%3Crect x='64' y='64' width='42' height='42' fill='white'/%3E%3C/svg%3E%0A");
+      top: 0; }
+    .contact-section .overlay-img::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='131' height='106' viewBox='0 0 131 106' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect opacity='0.1' width='64' height='64' fill='white'/%3E%3Crect opacity='0.1' x='106' y='39' width='25' height='25' fill='white'/%3E%3Crect x='64' y='64' width='42' height='42' fill='%231B1C31'/%3E%3C/svg%3E%0A");
+      bottom: 0; }
 
 .contact-form .input_field {
   font-family: var(--secondary-font);
@@ -1076,7 +1129,7 @@ section {
 .toast {
   position: fixed;
   top: 16px;
-  right: 25px;
+  right: -9999999px;
   width: 375px;
   background: #1d1e22;
   color: #ffffff;
@@ -1208,9 +1261,7 @@ section {
       padding-right: 0;
       margin-bottom: -270px; }
       .contact-section .form-wrap::before {
-        height: 40px;
-        width: 40px;
-        right: -10px;
+        right: -10px !important;
         top: -20px; }
       .contact-section .form-wrap .rectangle-slab::before {
         background: #ffffff; }
@@ -1397,5 +1448,3 @@ section {
           margin-top: 10px;
           padding-right: 10px;
           margin-right: 10px; } }
-
-/*# sourceMappingURL=style.css.map */

@@ -176,3 +176,18 @@ h6 {
         width: 100%;
     }
 }
+
+[data-aos][data-aos][data-aos-duration="400"],
+body[data-aos-duration="400"] [data-aos] {
+    transition-duration: 800ms;
+}
+
+@include keyframes(fly) {
+    0% {
+        right: 0;
+        transform: scaleX(50%) scaleY(50%);
+    }
+    100% {
+        right: 10px;
+    }
+}

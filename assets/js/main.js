@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/******* Animation  ****/
+
+AOS.init({
+    once: true
+})
+
+
+/*********** Contact Form Validation  ************/
 const dummyDB = [
     { email: 'admin@gmail.com', password: 'admin' }
 ]
@@ -32,10 +40,10 @@ function checkInput() {
     const userInput = [];
 
     if (emailValue === '' || emailValue == null) {
-        setErrorFor(email, "Email cannot be blank");
+        setErrorFor(email, "Email cannot be blank, enter admin@gmail.com as email");
         userInput.push(false);
     } else if (!isEmail(emailValue)) {
-        setErrorFor(email, "Email is not valid");
+        setErrorFor(email, "Email is not valid, enter admin@gmail.com as email");
         userInput.push(false);
     } else {
         setSuccessFor(email);
@@ -43,7 +51,7 @@ function checkInput() {
     }
 
     if (passwordValue === '' || passwordValue == null) {
-        setErrorFor(password, "Password cannot be blank");
+        setErrorFor(password, "Password cannot be blank, enter admin as password");
         userInput.push(false);
     } else {
         setSuccessFor(password);

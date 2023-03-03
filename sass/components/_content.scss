@@ -279,6 +279,13 @@ section {
             display: block;
             position: absolute;
             right: 0;
+            z-index: 1;
+            @include animation(fly);
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
             @include media(sm) {
                 height: 70px;
                 width: 70px;
@@ -456,6 +463,13 @@ section {
             position: absolute;
             left: 0;
             top: 110px;
+            z-index: 1;
+            @include animation(fly);
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
             @include media(sm) {
                 top: 65px;
             }
@@ -551,6 +565,12 @@ section {
             right: 0px;
             top: -15px;
             z-index: 1;
+            @include animation(fly);
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
             @include media(sm) {
                 height: 50px;
                 width: 50px;
@@ -558,6 +578,7 @@ section {
         }
     }
     .overlay-img {
+        overflow: hidden;
         &::before,
         &::after {
             content: "";
@@ -705,7 +726,7 @@ section {
 .toast {
     position: fixed;
     top: 16px;
-    right: 25px;
+    right: -9999999px;
     width: 375px;
     background: #1d1e22;
     color: #ffffff;
@@ -843,9 +864,7 @@ section {
             padding-right: 0;
             margin-bottom: -270px;
             &::before {
-                height: 40px;
-                width: 40px;
-                right: -10px;
+                right: -10px !important;
                 top: -20px;
             }
             .rectangle-slab::before {
