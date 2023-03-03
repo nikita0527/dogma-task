@@ -1149,7 +1149,8 @@ section {
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
   z-index: 999; }
   .toast.active {
-    transform: translateX(0); }
+    transform: translateX(0);
+    right: 0; }
   .toast i:first-child {
     color: #e74c3c;
     font-size: 20px; }

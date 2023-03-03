@@ -742,6 +742,7 @@ section {
     z-index: 999;
     &.active {
         transform: translateX(0);
+        right: 0;
     }
     i {
         &:first-child {
